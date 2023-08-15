@@ -1,0 +1,242 @@
+%
+% Template Laporan Tugas Akhir Jurusan Informatika Unsyiah 
+%
+% @author Abdul Hafidh
+% @version 1.1
+% @since 08.09.2023
+%
+% Template ini telah disesuaikan dengan aturan penulisan tugas akhir yang terdapat pada dokumen Panduan Tugas Akhir FMIPA Unsyiah tahun 2016.
+%
+
+
+% karena jifhasiltheme.cls ada di folder lib, maka kita harus menambahkan path lib/ ke dalam path pencarian file
+\makeatletter
+\def\input@path{{lib/}}
+\makeatother
+% Template pembuatan naskah tugas akhir.
+\documentclass[dvipsnames]{jifhasiltheme}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+%\usepackage[a4paper,left=14cm,right=3cm,top=3cm,bottom=5cm]{geometry}
+%karena file hype.indonesia.tex ada di folder language, maka kita harus menambahkan path language/ ke dalam path pencarian file
+\makeatletter
+\def\input@path{{language/}}
+\makeatother
+% Daftar pemenggalan suku kata dan istilah dalam LaTeX
+\include{hype.indonesia}
+
+% Untuk prefiks pada daftar gambar dan tabel
+\usepackage[titles]{tocloft}
+
+\usepackage[justification=centering]{caption}% or e.g. [format=hang]
+
+% Ini tambahan dari budi
+\newcommand*{\enableboldchapterintoc}{%
+  \addtocontents{toc}{\string\renewcommand{\protect\cftchapfont}{\protect\normalfont\protect\bfseries}}
+  \addtocontents{toc}{\string\renewcommand{\protect\cftchappagefont}{\protect\normalfont\protect}}
+  \addtocontents{toc}{\protect\setlength{\cftbeforechapskip}{12pt}}
+}
+\newcommand*{\disableboldchapterintoc}{%
+  \addtocontents{toc}{\string\renewcommand{\protect\cftchappagefont}{\protect\normalfont}}
+  \addtocontents{toc}{\string\renewcommand{\protect\cftchapfont}{\protect\normalfont}}
+  \addtocontents{toc}{\protect\setlength{\cftbeforechapskip}{0pt}}
+}
+% Ini tambahan dari budi
+
+\renewcommand{\cftdotsep}{0.5}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+%\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
+
+\renewcommand\cftfigpresnum{Gambar\  }
+\renewcommand\cfttabpresnum{Tabel\   }
+
+\newcommand{\listappendicesname}{DAFTAR LAMPIRAN}
+\newlistof{appendices}{apc}{\listappendicesname}
+\newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{#1}}
+\newcommand{\newappendix}[1]{\section*{#1}\appendices{#1}}
+
+% Untuk hyperlink dan table of content
+\usepackage[hidelinks]{hyperref}
+\renewcommand\UrlFont{\rmfamily\itshape} %it's me!
+\newlength{\mylenf}
+\settowidth{\mylenf}{\cftfigpresnum}
+\setlength{\cftfignumwidth}{\dimexpr\mylenf+2em}
+\setlength{\cfttabnumwidth}{\dimexpr\mylenf+2em}
+
+% Agar ada tulisan BAB pada TOC
+\renewcommand\cftchappresnum{BAB } 
+  \cftsetindents{chapter}{0em}{4.5em} %indenting bab
+  \cftsetindents{section}{4.5em}{2em}
+  \cftsetindents{subsection}{6.5em}{3em}
+ 
+% Agar di TOC setiap angka bab/subbab diakhiri titik
+
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+
+% Agar setiap angka bab/subbab diakhiri titik
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+
+% Agar disetiap caption table dan gambar diakhiri titik
+\usepackage[labelsep=period]{caption}
+
+% Untuk Bold Face pada Keterangan Gambar
+\usepackage[labelfont=bf]{caption}
+
+% Untuk caption dan subcaption
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+% Agar bisa menggunakan warna LaTeX
+\usepackage{color} %it's me!
+
+% Agar table yang panjang bisa cut ke next page    %byRennyAdr
+\usepackage{longtable}
+
+% Untuk page landscape        %byRennyAdr
+\usepackage{pdflscape}
+\usepackage{lscape}
+
+% Agar bisa bikin code snippet
+\usepackage{listings, lstautogobble} %it's me!
+
+\usepackage{adjustbox}
+
+% untuk shadow gambar     %tomy
+\usepackage{fancybox, graphicx}
+
+% untuk cite url
+\usepackage{url}
+
+\usepackage{siunitx}
+
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+
+\makeatletter
+\def\input@path{{include/}}
+\makeatother
+% Sampul Depan
+\include{sampul-depan}
+
+% Awal dokumen
+\usepackage{fancyhdr}
+\usepackage{rotating}
+% Untuk prefiks pada Daftar Program   
+% byRennyAdr
+\makeatletter
+\begingroup\let\newcounter\@gobble\let\setcounter\@gobbletwo
+\globaldefs\@ne \let\c@loldepth\@ne
+\newlistof{listings}{lol}{\lstlistlistingname}
+\endgroup
+\let\l@lstlisting\l@listings
+\AtBeginDocument{\addtocontents{lol}{\protect\addvspace{10\p@}}}
+\makeatother
+\renewcommand{\lstlistoflistings}{\listoflistings}
+\renewcommand\cftlistingspresnum{Program~}
+\cftsetindents{listings}{1.5em}{7em}
+
+%tab didaftar pustaka -Indah
+\setlength{\bibhang}{30pt}
+
+%split rumus -Indah
+\usepackage{amsmath}
+
+\begin{document}
+\fancyhf{} 
+\fancyfoot[C]{\thepage}
+
+
+\cover
+
+\approvalpage
+
+\include{bebas-plagiasi}
+\include{surat-pernyataan}
+%-----------------------------------------------------------------
+% Disini kata pengantar
+%-----------------------------------------------------------------
+\include{kata-pengantar}
+
+\include{abstrak-indonesia} %berikan comment jika proposal
+
+\include{abstrak-english} %berikan comment jika proposal
+
+
+%-----------------------------------------------------------------
+% TOC menggunakan single space
+%-----------------------------------------------------------------
+
+\addcontentsline{toc}{chapter}{Daftar Isi}
+\begin{singlespace}
+	\tableofcontents
+\end{singlespace}
+\listoftables
+\addcontentsline{toc}{chapter}{Daftar Tabel}
+\listoffigures
+\addcontentsline{toc}{chapter}{Daftar Gambar}
+
+\renewcommand{\lstlistlistingname}{DAFTAR PROGRAM}
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{Daftar Program}
+
+\listofappendices
+\addcontentsline{toc}{chapter}{Daftar Lampiran}
+
+\enableboldchapterintoc
+%-----------------------------------------------------------------
+% Daftar Singkatan 
+%-----------------------------------------------------------------
+\include{daftar-singkatan}
+
+% Caption untuk code snippet. it's me!
+\renewcommand{\thelstlisting}{\arabic{chapter}.\arabic{lstlisting}}
+\renewcommand*\lstlistingname{Program}
+
+%-----------------------------------------------------------------
+% Disini awal masukan untuk Bab
+%-----------------------------------------------------------------
+\begin{onehalfspace}
+
+\fancyhf{} 
+\fancyfoot[C]{\thepage}
+\pagenumbering{arabic}
+
+\include{bab1}
+
+\include{bab2}
+
+\include{bab3}
+
+\include{bab4}
+
+\include{bab5}
+
+\begin{spacing}{1}
+\bibliography{daftar-pustaka}
+\end{spacing}
+\addcontentsline{toc}{chapter}{DAFTAR KEPUSTAKAAN}
+%-----------------------------------------------------------------
+% Disini akhir masukan Daftar Pustaka
+%-----------------------------------------------------------------
+
+%\include{markLampiran}
+\include{lampiran}
+\addcontentsline{toc}{chapter}{LAMPIRAN} %daftar lampiran
+
+\end{onehalfspace}
+
+\end{document}

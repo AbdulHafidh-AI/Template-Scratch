@@ -1,0 +1,16 @@
+# ignore 
+
+# ignore all the format that compile by LaTeX for example like lof, lot, toc, etc.
+
+*.lof
+*.lot
+*.apc
+*.toc
+*.aux
+*.out
+*.bcf
+*.log
+*.lot
+*.run.xml
+*.aux
+*.lol
