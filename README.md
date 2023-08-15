@@ -11,11 +11,11 @@
 2. Install TeX Live
 <pre><code>sudo apt install texlive-full </pre> </code>
 
-
-
 ## Usage
 
 - Clone this repository
+
+<pre><code> git clone https://github.com/AbdulHafidh-AI/Template-Scratch.git </pre> </code>
 
 ## Compilation
 
