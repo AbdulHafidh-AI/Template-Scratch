@@ -323,7 +323,7 @@
 	
 	\newgeometry{a4paper,left=3.5cm,right=3cm,top=3cm,bottom=3cm}
 	\disableboldchapterintoc
-	%\addcontentsline{toc}{chapter}{Halaman Judul}
+	\addcontentsline{toc}{chapter}{Halaman Judul}
 	\thispagestyle{empty}%
 	\pagenumbering{roman}
 	\setcounter{page}{1}
