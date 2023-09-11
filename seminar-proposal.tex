@@ -54,8 +54,8 @@
 \renewcommand\cftfigpresnum{Gambar\  }
 \renewcommand\cfttabpresnum{Tabel\   }
 
-\newcommand{\listappendicesname}{DAFTAR LAMPIRAN}
-\newlistof{appendices}{apc}{\listappendicesname}
+% \newcommand{\listappendicesname}{DAFTAR LAMPIRAN}
+% \newlistof{appendices}{apc}{\listappendicesname}
 \newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{#1}}
 \newcommand{\newappendix}[1]{\section*{#1}\appendices{#1}}
 
@@ -113,6 +113,8 @@
 
 % untuk cite url
 \usepackage{url}
+
+\usepackage{microtype} % untuk mengatur spasi pada paragraf
 
 \usepackage{siunitx}
 
