@@ -1,0 +1,17 @@
+\begin{thebibliography}{}
+
+\bibitem[Jose dkk., 2019]{jose2019}
+Jose, E., Greeshma, M., Haridas, M.~T., dan Supriya, M. (2019).
+\newblock Face recognition based surveillance system using facenet and mtcnn on
+  jetson tx2.
+\newblock In {\em 2019 5th International Conference on Advanced Computing \&
+  Communication Systems (ICACCS)}, pages 608--613. IEEE.
+
+\bibitem[Rajagede dkk., 2021]{rajagede2021}
+Rajagede, R.~A., Rahmadi, R., dkk. (2021).
+\newblock Presensi kelas berbasis pola wajah, senyum dan wi-fi terdekat dengan
+  deep learning.
+\newblock {\em Jurnal RESTI (Rekayasa Sistem Dan Teknologi Informasi)},
+  5(1):31--38.
+
+\end{thebibliography}

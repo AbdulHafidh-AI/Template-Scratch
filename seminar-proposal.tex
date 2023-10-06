@@ -16,6 +16,11 @@
 % Template pembuatan naskah tugas akhir.
 \documentclass[dvipsnames]{jifproposal-abdul}
 
+
+
+
+
+
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
@@ -31,6 +36,18 @@
 
 % Untuk prefiks pada daftar gambar dan tabel
 \usepackage[titles]{tocloft}
+
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+% \patchcmd{<cmd>}{<search>}{<replace>}{<succes>}{<failure>}
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\makeatother
+
+
+
+
+\usepackage{titlesec}
 
 \usepackage[justification=centering]{caption}% or e.g. [format=hang]
 
@@ -55,7 +72,7 @@
 \renewcommand\cfttabpresnum{Tabel\   }
 
 % \newcommand{\listappendicesname}{DAFTAR LAMPIRAN}
-% \newlistof{appendices}{apc}{\listappendicesname}
+%\newlistof{appendices}{apc}{\listappendicesname}
 \newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{#1}}
 \newcommand{\newappendix}[1]{\section*{#1}\appendices{#1}}
 
@@ -66,6 +83,7 @@
 \settowidth{\mylenf}{\cftfigpresnum}
 \setlength{\cftfignumwidth}{\dimexpr\mylenf+2em}
 \setlength{\cfttabnumwidth}{\dimexpr\mylenf+2em}
+% prevent
 
 % Agar ada tulisan BAB pada TOC
 \renewcommand\cftchappresnum{BAB } 
@@ -113,7 +131,6 @@
 
 % untuk cite url
 \usepackage{url}
-
 \usepackage{microtype} % untuk mengatur spasi pada paragraf
 
 \usepackage{siunitx}
@@ -154,8 +171,11 @@
 %tab didaftar pustaka -Indah
 \setlength{\bibhang}{30pt}
 
+
 %split rumus -Indah
 \usepackage{amsmath}
+
+
 
 \begin{document}
 \fancyhf{} 
@@ -174,6 +194,8 @@
 % TOC menggunakan single space
 %-----------------------------------------------------------------
 
+
+
 \addcontentsline{toc}{chapter}{Daftar Isi}
 
 \begin{singlespace}
@@ -183,6 +205,7 @@
 \addcontentsline{toc}{chapter}{Daftar Tabel}
 \listoffigures
 \addcontentsline{toc}{chapter}{Daftar Gambar}
+
 
 
 
@@ -207,6 +230,9 @@
 \fancyfoot[C]{\thepage}
 \pagenumbering{arabic}
 
+\captionsetup[figure]{labelfont={normalfont}, textfont={normalfont}} % Unbold caption gambar
+\captionsetup[table]{labelfont={normalfont}, textfont={normalfont}} % Unbold caption tabel
+
 \include{bab1}
 
 \include{bab2}
@@ -220,7 +246,9 @@
 \begin{spacing}{1}
 \bibliography{daftar-pustaka}
 \end{spacing}
-%\addcontentsline{toc}{chapter}{DAFTAR KEPUSTAKAAN}
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+
+
 %-----------------------------------------------------------------
 % Disini akhir masukan Daftar Pustaka
 %-----------------------------------------------------------------

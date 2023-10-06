@@ -32,6 +32,13 @@
 % Untuk prefiks pada daftar gambar dan tabel
 \usepackage[titles]{tocloft}
 
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+% \patchcmd{<cmd>}{<search>}{<replace>}{<succes>}{<failure>}
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\makeatother
+
 \usepackage[justification=centering]{caption}% or e.g. [format=hang]
 
 % Ini tambahan dari budi
@@ -113,6 +120,7 @@
 
 % untuk cite url
 \usepackage{url}
+\usepackage{microtype} % untuk mengatur spasi pada paragraf
 
 \usepackage{siunitx}
 
@@ -215,6 +223,9 @@
 \fancyfoot[C]{\thepage}
 \pagenumbering{arabic}
 
+\captionsetup[figure]{labelfont={normalfont}, textfont={normalfont}} % Unbold caption gambar
+\captionsetup[table]{labelfont={normalfont}, textfont={normalfont}} % Unbold caption tabel
+
 \include{bab1}
 
 \include{bab2}
@@ -228,7 +239,7 @@
 \begin{spacing}{1}
 \bibliography{daftar-pustaka}
 \end{spacing}
-\addcontentsline{toc}{chapter}{DAFTAR KEPUSTAKAAN}
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
 %-----------------------------------------------------------------
 % Disini akhir masukan Daftar Pustaka
 %-----------------------------------------------------------------
