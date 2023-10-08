@@ -19,12 +19,8 @@
 
 ## Compilation
 
-1. Compile skripsi.tex
-<pre><code> pdflatex skripsi.tex </pre> </code>
-2. Compile seminar-proposal.tex
-<pre><code> pdflatex seminar-proposal.tex </pre> </code>
-3. Compile seminar-hasil.tex
-<pre><code> pdflatex seminar-hasil.tex </pre> </code>
+
+<pre><code>./build.sh</code></pre>
 
 
 ## Alternative Way
