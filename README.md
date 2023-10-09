@@ -28,6 +28,8 @@
 
 <pre><code>./build.sh</code></pre>
 
+Note: you can edit `build.sh` to compile only the file you want.
+
 
 ## Alternative Way
 
