@@ -17,6 +17,12 @@
 
 <pre><code> git clone https://github.com/AbdulHafidh-AI/Template-Scratch.git </pre> </code>
 
+
+## Warning 
+
+<p> Jika halaman daftar pustaka melebih satu maka uncomment baris yang berada di bawah bab pada file seminar proposal, seminar hasil, dan skripsi  </p>
+
+
 ## Compilation
 
 

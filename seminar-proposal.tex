@@ -153,6 +153,16 @@
 
 % Awal dokumen
 \usepackage{fancyhdr}
+% Command dibawah ini bertujuan untuk membuat nomor halaman berada di tengah lalu halaman selanjutnya di kanan
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\fancypagestyle{plain}{% <-- Ini akan mempengaruhi halaman pertama dari setiap bab
+  \fancyhf{}% Clear header/footer
+  \fancyfoot[C]{\thepage}% Nomor halaman di tengah
+  \renewcommand{\headrulewidth}{0pt}% Hapus garis header
+}
+
 \usepackage{rotating}
 % Untuk prefiks pada Daftar Program   
 % byRennyAdr
@@ -179,7 +189,7 @@
 
 \begin{document}
 \fancyhf{} 
-\fancyfoot[R]{\thepage}
+\fancyfoot[C]{\thepage}
 
 
 \cover
@@ -194,7 +204,10 @@
 % TOC menggunakan single space
 %-----------------------------------------------------------------
 
+\include{kata-pengantar}
+%\usepackage{bold-extra} % Paket tambahan untuk membuat teks tebal
 
+\titleformat{\section}{\normalfont\bfseries\uppercase}{\thesection}{1em}{} % Untuk membuat section menjadi kapital tapi daftar isi tetap non kapital
 
 \addcontentsline{toc}{chapter}{Daftar Isi}
 
@@ -233,21 +246,55 @@
 \captionsetup[figure]{labelfont={normalfont}, textfont={normalfont}} % Unbold caption gambar
 \captionsetup[table]{labelfont={normalfont}, textfont={normalfont}} % Unbold caption tabel
 
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
+
 \include{bab1}
+
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
 
 \include{bab2}
 
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
+
 \include{bab3}
+
+% Comment baris ini jika halaman daftar pustaka hanya 1 halaman \fancy{} dan \fancyfoot[C]{\thepage}
+\fancyhf{} 
+\fancyfoot[C]{\thepage}
 
 % \include{bab4}
 
 % \include{bab5}
 
+\fancypagestyle{daftarpustaka}{
+    \fancyhf{} % Hapus semua header dan footer yang sudah ada
+    \fancyfoot[C]{\thepage} % Letakkan nomor halaman di tengah kepala (center)
+    \renewcommand{\headrulewidth}{0pt} % Hapus garis pemisah kepala dengan konten
+    \renewcommand{\footrulewidth}{0pt} % Hapus garis pemisah footer dengan konten
+}
+
+
+% Halaman Daftar Pustaka dengan penomoran halaman berada di tengah dan nomor halaman selanjutnya di kanan
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+\begin{onehalfspace}
 \begin{spacing}{1}
+\pagestyle{daftarpustaka}
 \bibliography{daftar-pustaka}
 \end{spacing}
-\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
 
+% \begin{spacing}{1}
+% \bibliography{daftar-pustaka}
+% \end{spacing}
+
+
+
+  
+  
+    
+  
 
 %-----------------------------------------------------------------
 % Disini akhir masukan Daftar Pustaka

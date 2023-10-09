@@ -216,20 +216,52 @@
 \captionsetup[figure]{labelfont={normalfont}, textfont={normalfont}} % Unbold caption gambar
 \captionsetup[table]{labelfont={normalfont}, textfont={normalfont}} % Unbold caption tabel
 
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
+
 \include{bab1}
+
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
 
 \include{bab2}
 
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
+
 \include{bab3}
+
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
 
 \include{bab4}
 
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
+
 \include{bab5}
 
+% Comment baris ini jika halaman daftar pustaka hanya 1 halaman \fancy{} dan \fancyfoot[C]{\thepage}
+\fancyhf{} 
+\fancyfoot[C]{\thepage}
+
+
+
+\fancypagestyle{daftarpustaka}{
+    \fancyhf{} % Hapus semua header dan footer yang sudah ada
+    \fancyfoot[C]{\thepage} % Letakkan nomor halaman di tengah kepala (center)
+    \renewcommand{\headrulewidth}{0pt} % Hapus garis pemisah kepala dengan konten
+    \renewcommand{\footrulewidth}{0pt} % Hapus garis pemisah footer dengan konten
+}
+
+
+% Halaman Daftar Pustaka dengan penomoran halaman berada di tengah dan nomor halaman selanjutnya di kanan
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+\begin{onehalfspace}
 \begin{spacing}{1}
+\pagestyle{daftarpustaka}
 \bibliography{daftar-pustaka}
 \end{spacing}
-\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
 %-----------------------------------------------------------------
 % Disini akhir masukan Daftar Pustaka
 %-----------------------------------------------------------------
