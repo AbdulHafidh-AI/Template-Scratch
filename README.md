@@ -14,16 +14,6 @@
    
 ``` sudo apt install texlive-full ```
 
-## Usage
-
-- Clone this repository
-
-``` git clone https://github.com/AbdulHafidh-AI/Template-Scratch.git ```
-
-
-## Warning 
-
-<p> Jika halaman daftar pustaka melebih satu maka uncomment baris yang berada di bawah bab pada file seminar proposal, seminar hasil, dan skripsi  </p>
 
 
 ## Compilation
