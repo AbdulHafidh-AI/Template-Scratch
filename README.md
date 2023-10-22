@@ -7,15 +7,18 @@
 
 ## Installation for Linux Users
 1. Run System update
-<pre><code>sudo apt update </pre> </code>
-2. Install TeX Live
-<pre><code>sudo apt install texlive-full </pre> </code>
+   
+``` sudo apt update ```
+
+3. Install TeX Live
+   
+``` sudo apt install texlive-full ```
 
 ## Usage
 
 - Clone this repository
 
-<pre><code> git clone https://github.com/AbdulHafidh-AI/Template-Scratch.git </pre> </code>
+``` git clone https://github.com/AbdulHafidh-AI/Template-Scratch.git ```
 
 
 ## Warning 
@@ -26,7 +29,7 @@
 ## Compilation
 
 
-<pre><code>./build.sh</code></pre>
+``` ./build.sh ```
 
 Note: you can edit `build.sh` to compile only the file you want.
 
