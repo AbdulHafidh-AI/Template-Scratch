@@ -10,7 +10,7 @@
    
 ``` sudo apt update ```
 
-3. Install TeX Live
+2. Install TeX Live
    
 ``` sudo apt install texlive-full ```
 
