@@ -221,7 +221,7 @@ FUNCTION {format.names}
                 'skip$
               if$
               t "others" =
-                { " dkk." * }
+                { " et al." * }
                 { " dan " * t * }
               if$
             }
@@ -843,11 +843,11 @@ FUNCTION {format.lab.names}
   s #1 "{vv~}{ll}" format.name$
   s num.names$ duplicate$
   #2 >
-    { pop$ " dkk." * }
+    { pop$ " et al." * }
     { #2 <
         'skip$
         { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
-            { " dkk." * }
+            { " et al." * }
             { " dan " * s #2 "{vv~}{ll}" format.name$ * }
           if$
         }
