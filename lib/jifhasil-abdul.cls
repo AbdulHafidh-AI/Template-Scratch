@@ -61,7 +61,8 @@
 \ProcessOptions
 \LoadClass[a4paper,12pt]{report}
 \RequirePackage{natbib}
-\bibliographystyle{style/jifbibstyle}
+% \bibliographystyle{style/jifbibstyle}
+\bibliographystyle{apalike}
 %\RequirePackage{glossaries}%
 %\renewcommand{\nomname}{\nomenclaturename}%
 %\makeglossary%
@@ -192,8 +193,8 @@
 \def\partname{BAGIAN}%
 \def\chaptername{BAB}%
 \def\appendixname{LAMPIRAN}%
-\def\refname{DAFTAR KEPUSTAKAAN}%
-\def\bibname{DAFTAR KEPUSTAKAAN}%
+\def\refname{DAFTAR PUSTAKA}%
+\def\bibname{DAFTAR PUSTAKA}%
 \def\indexname{Indeks}%
 \def\figurename{Gambar}%
 \def\tablename{Tabel}%
@@ -290,7 +291,7 @@
       \begin{singlespace}
       \fontsize{14pt}{16pt}\selectfont\MakeUppercase{\Large{\bfseries\@judul}}\par\nobreak
       \vspace{2.5cm}
-      \MakeUppercase{\large{\bfseries{SEMINAR PROPOSAL}}}\\ %it's me!
+      \MakeUppercase{\large{\bfseries{SEMINAR HASIL}}}\\ %it's me!
       \vspace{1.0cm}
 	  \normalsize{Diajukan untuk melengkapi tugas-tugas dan\\ memenuhi syarat-syarat guna memperoleh gelar Sarjana Komputer\\} %it's me!
        \vspace{1.0cm}
@@ -331,7 +332,7 @@
 		\begin{singlespace}
 			\fontsize{18pt}{20pt}\selectfont\MakeUppercase{\Large{\bfseries\@judulcover}}\par\nobreak
 			\vspace{2.5cm}
-			\MakeUppercase{\large{\bfseries{SEMINAR PROPOSAL}}}\\ %it's me!
+			\MakeUppercase{\large{\bfseries{SEMINAR HASIL}}}\\ %it's me!
 			\vspace{1.0cm}
 			\normalsize{Diajukan untuk melengkapi tugas-tugas dan\\ memenuhi syarat-syarat guna memperoleh gelar Sarjana Komputer\\} %it's me!
 			\vspace{1.0cm}

@@ -61,7 +61,8 @@
 \ProcessOptions
 \LoadClass[a4paper,12pt]{report}
 \RequirePackage{natbib}
-\bibliographystyle{style/jifbibstyle}
+% \bibliographystyle{style/jifbibstyle}
+\bibliographystyle{apalike}
 %\RequirePackage{glossaries}%
 %\renewcommand{\nomname}{\nomenclaturename}%
 %\makeglossary%
@@ -192,8 +193,8 @@
 \def\partname{BAGIAN}%
 \def\chaptername{BAB}%
 \def\appendixname{LAMPIRAN}%
-\def\refname{DAFTAR KEPUSTAKAAN}%
-\def\bibname{DAFTAR KEPUSTAKAAN}%
+\def\refname{DAFTAR PUSTAKA}%
+\def\bibname{DAFTAR PUSTAKA}%
 \def\indexname{Indeks}%
 \def\figurename{Gambar}%
 \def\tablename{Tabel}%

@@ -5,6 +5,7 @@
 % Template ini telah disesuaikan dengan aturan penulisan tugas akhir yang terdapat pada dokumen Panduan Tugas Akhir FMIPA Unsyiah tahun 2010.
 %
 
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{jifhasiltheme}
 
@@ -61,12 +62,13 @@
 \ProcessOptions
 \LoadClass[a4paper,12pt]{report}
 \RequirePackage{natbib}
-% \bibliographystyle{style/jifbibstyle}
-\bibliographystyle{apalike}
+\bibliographystyle{style/jifbibstyle}
+%\bibliographystyle{apalike}
 %\RequirePackage{glossaries}%
 %\renewcommand{\nomname}{\nomenclaturename}%
 %\makeglossary%
 %\makenomenclature
+
 
 %------------------------------------------------------------
 %Layout
@@ -84,6 +86,7 @@
 \setlength{\marginparwidth}{0pt}
 
 \setlength{\parindent}{3em} %Indent approx 6 character
+
 
 %------------------------------------------------------------
 %The form of page numbering
@@ -177,6 +180,8 @@
 \renewcommand \thetable
      {\ifnum \c@chapter>\z@ \@arabic\c@chapter.\fi \@arabic\c@table}
 
+
+
 %------------------------------------------------------------
 % Redefine caption names
 %------------------------------------------------------------
@@ -185,14 +190,14 @@
 \def\contentsname{DAFTAR ISI}%
 \def\listfigurename{DAFTAR GAMBAR}%
 \def\listtablename{DAFTAR TABEL}%
-\def\listappendixname{DAFTAR LAMPIRAN}%
+%\def\listappendixname{DAFTAR LAMPIRAN}%
 \def\nomenclaturename{DAFTAR SINGKATAN}%
 \def\abstractname{ABSTRAK}%
 \def\acknowledgmentname{HALAMAN PERSEMBAHAN}%
 \def\approvalname{PENGESAHAN}%
 \def\partname{BAGIAN}%
 \def\chaptername{BAB}%
-\def\appendixname{LAMPIRAN}%
+%\def\appendixname{LAMPIRAN}%
 \def\refname{DAFTAR PUSTAKA}%
 \def\bibname{DAFTAR PUSTAKA}%
 \def\indexname{Indeks}%
@@ -291,7 +296,7 @@
       \begin{singlespace}
       \fontsize{14pt}{16pt}\selectfont\MakeUppercase{\Large{\bfseries\@judul}}\par\nobreak
       \vspace{2.5cm}
-      \MakeUppercase{\large{\bfseries{SEMINAR HASIL}}}\\ %it's me!
+      \MakeUppercase{\large{\bfseries{PROPOSAL PENELITIAN}}}\\ %it's me!
       \vspace{1.0cm}
 	  \normalsize{Diajukan untuk melengkapi tugas-tugas dan\\ memenuhi syarat-syarat guna memperoleh gelar Sarjana Komputer\\} %it's me!
        \vspace{1.0cm}
@@ -332,7 +337,7 @@
 		\begin{singlespace}
 			\fontsize{18pt}{20pt}\selectfont\MakeUppercase{\Large{\bfseries\@judulcover}}\par\nobreak
 			\vspace{2.5cm}
-			\MakeUppercase{\large{\bfseries{SEMINAR HASIL}}}\\ %it's me!
+			\MakeUppercase{\large{\bfseries{PROPOSAL PENELITIAN}}}\\ %it's me!
 			\vspace{1.0cm}
 			\normalsize{Diajukan untuk melengkapi tugas-tugas dan\\ memenuhi syarat-syarat guna memperoleh gelar Sarjana Komputer\\} %it's me!
 			\vspace{1.0cm}
