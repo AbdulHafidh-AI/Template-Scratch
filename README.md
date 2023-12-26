@@ -34,12 +34,12 @@ git clone https://github.com/AbdulHafidh-AI/Template-Scratch.git
 ```
 ./build.sh
 ```
-### Windows
+### Windows (Command Prompt)
 ```
-sh build.sh
+.\build.bat
 ```
 
-Note: you can edit `build.sh` to compile only the file you want.
+Note: you can edit `build.sh` or `build.bat` to compile only the file you want.
 
 
 ## Alternative Way
