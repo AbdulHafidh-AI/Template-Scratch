@@ -194,7 +194,7 @@
 \def\nomenclaturename{DAFTAR SINGKATAN}%
 \def\abstractname{ABSTRAK}%
 \def\acknowledgmentname{HALAMAN PERSEMBAHAN}%
-\def\approvalname{PENGESAHAN}%
+\def\approvalname{PENGESAHAN PROPOSAL}%
 \def\partname{BAGIAN}%
 \def\chaptername{BAB}%
 %\def\appendixname{LAMPIRAN}%
@@ -365,7 +365,7 @@
 %Approval Page
 %------------------------------------------------------------
 \def\approvalpage{%
-	%\clearpage\addcontentsline{toc}{chapter}{Halaman Pengesahan}
+	\clearpage\addcontentsline{toc}{chapter}{Halaman Pengesahan}
 	\chapter*{\approvalname}%
 	\thispagestyle{empty}
 	\begin{center}
@@ -373,8 +373,8 @@
 			\vspace{0.5cm}
 			\fontsize{12pt}{10pt}\selectfont\MakeUppercase{\large{\bfseries\@judul}}\par\nobreak
 
-			\vspace{1cm}
-			\fontsize{12pt}{10pt}\selectfont\MakeUppercase{\large{\bfseries\@judull}}\par\nobreak
+			% \vspace{1cm}
+			% \fontsize{12pt}{10pt}\selectfont\MakeUppercase{\large{\bfseries\@judull}}\par\nobreak
 
 			\vspace{0.9cm}
 			Oleh:
@@ -409,21 +409,22 @@
 			
 			% Mengetahui dekan dan kajur informatika
 			% Tanpa mengetahui dekan
+			
 			Mengetahui:\\
-				\begin{tabular}{lll}
-					Dekan Fakultas MIPA & &
-					Koordinator Program Studi Informatika \\ 
-					\vspace{-0.27cm} & \vspace{-0.27cm} & \vspace{-0.27cm}\\
-					Universitas Syiah Kuala, & & Universitas Syiah Kuala,\\
-					\vspace{0.3cm} & \vspace{0.3cm} & \vspace{0.3cm}\\
-			 		\underline{\@dekan} & & \underline{\@kaprodi}\\
-		      			NIP. \@dekannip & & NIP. \@kaprodinip
-				\end{tabular}
-		\end{doublespace}
+			\vspace{0.9cm}
+			Koordinator Program Studi Informatika \\ 
+			\vspace{-0.27cm}\\
+			Universitas Syiah Kuala,\\
+			\vspace{1.7cm}\\
+			\underline{\@kaprodi} & \\
+			NIP. \@kaprodinip &
 
-		\vspace{0.9cm}
-		Lulus Sidang Sarjana pada hari \@approvaldate
+			\end{doublespace}
+		% \vspace{0.9cm}
+		% Lulus Sidang Sarjana pada hari \@approvaldate
 	\end{center}
+
+
 }
 %------------------------------------------------------------
 % Acknowlegment
