@@ -68,6 +68,16 @@
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 %\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
 
+\addtocontents{toc}{~\hfill \textit{Halaman}\par} % Menambahkan kata "Halaman" di sebelah kanan daftar isi
+
+% Membuat juga kata "halaman" di daftar gambar dan daftar tabel
+\addtocontents{lof}{~\hfill \textit{Halaman}\par}
+\addtocontents{lot}{~\hfill \textit{Halaman}\par}
+
+
+
+
+
 \renewcommand\cftfigpresnum{Gambar\  }
 \renewcommand\cfttabpresnum{Tabel\   }
 
