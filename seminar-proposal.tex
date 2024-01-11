@@ -199,6 +199,16 @@
 \usepackage{amsmath}
 
 
+% Mengatur jarak pada nomor atau label section dan judul section 
+
+% Contoh 1.1 Judul Section menjadi 1.1     Judul Section
+
+
+\usepackage{titlesec}
+
+
+
+
 \begin{document}
 \fancyhf{} 
 \fancyfoot[C]{\thepage}
@@ -221,7 +231,10 @@
 \include{kata-pengantar}
 %\usepackage{bold-extra} % Paket tambahan untuk membuat teks tebal
 
-\titleformat{\section}{\normalfont\bfseries\uppercase}{\thesection}{1em}{} % Untuk membuat section menjadi kapital tapi daftar isi tetap non kapital
+\titleformat{\section}{\normalfont\bfseries\uppercase}{\thesection}{1.7em}{} % Untuk membuat section menjadi kapital tapi daftar isi tetap non kapital
+
+% Untuk subsection set saja jaraknya 1.5em (ga perlu buat kapital seperti section)
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.9em}{}
 
 \addcontentsline{toc}{chapter}{Daftar Isi}
 
