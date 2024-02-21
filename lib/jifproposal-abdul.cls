@@ -412,7 +412,7 @@
 			
 			Mengetahui:\\
 			\vspace{0.9cm}
-			Koordinator Program Studi Informatika \\ 
+			Ketua Jurusan Informatika \\ 
 			\vspace{-0.27cm}\\
 			Universitas Syiah Kuala,\\
 			\vspace{1.7cm}\\
