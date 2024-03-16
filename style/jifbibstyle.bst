@@ -222,7 +222,7 @@ FUNCTION {format.names}
               if$
               t "others" =
                 { " et al." * }
-                { " and " * t * }
+                { " \& " * t * }
               if$
             }
           if$
