@@ -88,6 +88,15 @@
 \setlength{\parindent}{3em} %Indent approx 6 character
 
 
+
+
+
+
+
+
+
+
+
 %------------------------------------------------------------
 %The form of page numbering
 %------------------------------------------------------------
@@ -396,6 +405,7 @@
 			%\vspace{1.0cm}
 
 			Menyetujui:\\
+			\vspace{1.0cm}
 			\onehalfspacing
 				\begin{tabular}{lll}
 					Pembimbing I & \hspace{2.5cm} & Pembimbing II \\
@@ -412,7 +422,7 @@
 			
 			Mengetahui:\\
 			\vspace{0.9cm}
-			Ketua Jurusan Informatika \\ 
+			Koordinator Program Studi Informatika \\ 
 			\vspace{-0.27cm}\\
 			Universitas Syiah Kuala,\\
 			\vspace{1.7cm}\\

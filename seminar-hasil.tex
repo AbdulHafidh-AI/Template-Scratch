@@ -14,7 +14,7 @@
 \def\input@path{{lib/}}
 \makeatother
 % Template pembuatan naskah tugas akhir.
-\documentclass[dvipsnames]{jifhasil-abdul}
+\documentclass[dvipsnames]{jifhasiltheme}
 
 \tolerance=1
 \emergencystretch=\maxdimen
@@ -65,6 +65,11 @@
 \newlistof{appendices}{apc}{\listappendicesname}
 \newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{#1}}
 \newcommand{\newappendix}[1]{\section*{#1}\appendices{#1}}
+
+% mengatur format pada daftar lampiran
+\renewcommand{\cftappendicespresnum}{Lampiran\ }
+\cftsetindents{appendices}{1em}{5.3em}
+
 
 % Untuk hyperlink dan table of content
 \usepackage[hidelinks]{hyperref}
@@ -163,29 +168,44 @@
 %split rumus -Indah
 \usepackage{amsmath}
 
+\usepackage{pdfpages}
+
 \begin{document}
 \fancyhf{} 
-\fancyfoot[R]{\thepage}
+\fancyfoot[C]{\thepage}
 
 
 \cover
 
-\approvalpage
+%\approvalpage
+%\clearpage\addcontentsline{toc}{chapter}{Halaman Pengesahan}
+%includepdf[pages={1}]{pengesahan-hasil.pdf}
 
-\include{bebas-plagiasi}
-\include{surat-pernyataan}
+%\include{bebas-plagiasi}
+%\include{surat-pernyataan}
+
+
+
+
+
+\include{abstrak-indonesia} %berikan comment jika proposal
+
+\include{abstrak-english} %berikan comment jika proposal
 %-----------------------------------------------------------------
 % Disini kata pengantar
 %-----------------------------------------------------------------
+%\clearpage
+%
 \include{kata-pengantar}
-
-\titleformat{\section}{\normalfont\bfseries\uppercase}{\thesection}{1em}{} % Untuk membuat section menjadi kapital tapi daftar isi tetap non kapital
-
-\include{daftar-singkatan} % jangan dihapus
+%\includepdf[pages=-]{ttd-seminar-hasil_signed.pdf}
 
 
 
- %berikan comment jika proposal
+\titleformat{\section}{\normalfont\bfseries\uppercase}{\thesection}{1.7em}{} % Untuk membuat section menjadi kapital tapi daftar isi tetap non kapital
+
+% Untuk subsection set saja jaraknya 1.5em (ga perlu buat kapital seperti section)
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.9em}{}
+
 
 
 %-----------------------------------------------------------------
@@ -193,7 +213,6 @@
 %-----------------------------------------------------------------
 
 \addcontentsline{toc}{chapter}{Daftar Isi}
-
 \begin{singlespace}
 	\tableofcontents
 \end{singlespace}
@@ -202,15 +221,18 @@
 \listoffigures
 \addcontentsline{toc}{chapter}{Daftar Gambar}
 
-
+% \renewcommand{\lstlistlistingname}{DAFTAR PROGRAM}
+% \lstlistoflistings
+% \addcontentsline{toc}{chapter}{Daftar Program}
 
 \listofappendices
+\addcontentsline{toc}{chapter}{Daftar Lampiran}
 
 \enableboldchapterintoc
 %-----------------------------------------------------------------
 % Daftar Singkatan 
 %-----------------------------------------------------------------
-\include{daftar-singkatan} % jangan dihapus
+\include{daftar-singkatan}
 
 % Caption untuk code snippet. it's me!
 \renewcommand{\thelstlisting}{\arabic{chapter}.\arabic{lstlisting}}
@@ -253,14 +275,10 @@
 
 \include{bab5}
 
-\fancyhf{} 
-\fancyfoot[C]{\thepage}
-
-
 
 \fancypagestyle{daftarpustaka}{
     \fancyhf{} % Hapus semua header dan footer yang sudah ada
-    \fancyfoot[C]{\thepage} % Letakkan nomor halaman di tengah kepala (center)
+    \fancyfoot[R]{\thepage} % Letakkan nomor halaman di tengah kepala (center)
     \renewcommand{\headrulewidth}{0pt} % Hapus garis pemisah kepala dengan konten
     \renewcommand{\footrulewidth}{0pt} % Hapus garis pemisah footer dengan konten
 }

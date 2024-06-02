@@ -211,7 +211,7 @@
 \def\listtablename{LIST OF TABLES}%
 \def\listappendixname{LIST OF APPENDICES}%
 \def\nomenclaturename{NOMENCLATURE}%
-\def\abstractname{ABSTRACT}%
+\def\abstractname{\textit{ABSTRACT}}%
 \def\partname{PART}%
 \def\chaptername{CHAPTER}%
 \def\appendixname{APPENDIX}%
@@ -356,6 +356,71 @@
 	\end{center}
 }
 
+% %------------------------------------------------------------
+% %Approval Page
+% %------------------------------------------------------------
+% \def\approvalpage{%
+% 	\clearpage\addcontentsline{toc}{chapter}{Halaman Pengesahan}
+% 	\chapter*{\approvalname}%
+% 	\thispagestyle{empty}
+% 	\begin{center}
+% 		\begin{doublespace}
+% 			\vspace{0.5cm}
+% 			\fontsize{12pt}{10pt}\selectfont\MakeUppercase{\large{\bfseries\@judul}}\par\nobreak
+
+% 			\vspace{1cm}
+% 			\fontsize{12pt}{10pt}\selectfont\MakeUppercase{\large{\bfseries\@judull}}\par\nobreak
+
+% 			\vspace{0.9cm}
+% 			Oleh:
+% 			%\vspace{-0.5cm}
+% 			\begin{singlespace}
+% 				\begin{compactitem}
+% 					\addtolength{\itemindent}{3cm}
+% 					\setlength{\parsep}{0pt}
+% 					\item[]{\makebox[2cm]{Nama\hfill} : \@fullname}
+% 					\item[]{\makebox[2cm]{NPM\hfill} : \@idnum}
+% 					\item[]{\makebox[2cm]{Jurusan\hfill} : \@dept}
+% 				\end{compactitem}
+% 			\end{singlespace}
+% 			%\vspace{2.0cm} edited 16/04/2022
+% 			\vspace{0.9cm}
+			
+% 			%Telah disetujui dan disahkan\\
+% 			%pada tanggal \@approvaldate
+% 			%\vspace{1.0cm}
+
+% 			Menyetujui:\\
+% 			\onehalfspacing
+% 				\begin{tabular}{lll}
+% 					Pembimbing I & \hspace{2.5cm} & Pembimbing II \\
+% 					\vspace{0.3cm} & \vspace{0.3cm} & \vspace{0.3cm}\\
+% 					\underline{\@firstsupervisor}& &
+% 					\underline{\@secondsupervisor} \\
+% 					NIP. \@firstnip & &  NIP. \@secondnip
+% 				\end{tabular}	
+% 			%\vspace{2.0cm} edited 16/04/2022
+% 			\vspace{1.0cm}
+			
+% 			% Mengetahui dekan dan kajur informatika
+% 			% Tanpa mengetahui dekan
+% 			Mengetahui:\\
+% 				\begin{tabular}{lll}
+% 					Dekan Fakultas MIPA & &
+% 					Koordinator Program Studi Informatika \\ 
+% 					\vspace{-0.27cm} & \vspace{-0.27cm} & \vspace{-0.27cm}\\
+% 					Universitas Syiah Kuala, & & Universitas Syiah Kuala,\\
+% 					\vspace{0.3cm} & \vspace{0.3cm} & \vspace{0.3cm}\\
+% 			 		\underline{\@dekan} & & \underline{\@kaprodi}\\
+% 		      			NIP. \@dekannip & & NIP. \@kaprodinip
+% 				\end{tabular}
+% 		\end{doublespace}
+
+% 		\vspace{0.9cm}
+% 		Lulus Sidang Sarjana pada hari \@approvaldate
+% 	\end{center}
+% } sidang
+
 %------------------------------------------------------------
 %Approval Page
 %------------------------------------------------------------
@@ -368,8 +433,8 @@
 			\vspace{0.5cm}
 			\fontsize{12pt}{10pt}\selectfont\MakeUppercase{\large{\bfseries\@judul}}\par\nobreak
 
-			\vspace{1cm}
-			\fontsize{12pt}{10pt}\selectfont\MakeUppercase{\large{\bfseries\@judull}}\par\nobreak
+			% \vspace{1cm}
+			% \fontsize{12pt}{10pt}\selectfont\MakeUppercase{\large{\bfseries\@judull}}\par\nobreak
 
 			\vspace{0.9cm}
 			Oleh:
@@ -391,6 +456,7 @@
 			%\vspace{1.0cm}
 
 			Menyetujui:\\
+			\vspace{1.0cm}
 			\onehalfspacing
 				\begin{tabular}{lll}
 					Pembimbing I & \hspace{2.5cm} & Pembimbing II \\
@@ -404,22 +470,24 @@
 			
 			% Mengetahui dekan dan kajur informatika
 			% Tanpa mengetahui dekan
+			
 			Mengetahui:\\
-				\begin{tabular}{lll}
-					Dekan Fakultas MIPA & &
-					Koordinator Program Studi Informatika \\ 
-					\vspace{-0.27cm} & \vspace{-0.27cm} & \vspace{-0.27cm}\\
-					Universitas Syiah Kuala, & & Universitas Syiah Kuala,\\
-					\vspace{0.3cm} & \vspace{0.3cm} & \vspace{0.3cm}\\
-			 		\underline{\@dekan} & & \underline{\@kaprodi}\\
-		      			NIP. \@dekannip & & NIP. \@kaprodinip
-				\end{tabular}
-		\end{doublespace}
+			\vspace{0.9cm}
+			Koordinator Program Studi Informatika \\ 
+			\vspace{-0.27cm}\\
+			Universitas Syiah Kuala,\\
+			\vspace{1.7cm}\\
+			\underline{\@kaprodi} & \\
+			NIP. \@kaprodinip &
 
-		\vspace{0.9cm}
-		Lulus Sidang Sarjana pada hari \@approvaldate
+			\end{doublespace}
+		% \vspace{0.9cm}
+		% Lulus Sidang Sarjana pada hari \@approvaldate
 	\end{center}
-}
+
+
+} % seminar-hasil
+
 %------------------------------------------------------------
 % Acknowlegment
 %------------------------------------------------------------
@@ -490,7 +558,7 @@
     }
   \begin{singlespacing}%
   %\vskip 20\p@
-  \addcontentsline{toc}{chapter}{Abstract}
+  \addcontentsline{toc}{chapter}{\textit{Abstract}}
 }
 \def\endabstracteng{\par\vfil\null\end{singlespacing}%
 \selectlanguage{bahasa}}
