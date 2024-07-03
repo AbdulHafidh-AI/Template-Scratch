@@ -61,6 +61,15 @@
 \renewcommand\cftfigpresnum{Gambar\  }
 \renewcommand\cfttabpresnum{Tabel\   }
 
+\addtocontents{toc}{~\hfill \textit{Halaman}\par} % Menambahkan kata "Halaman" di sebelah kanan daftar isi
+
+% Membuat juga kata "halaman" di daftar gambar dan daftar tabel
+\addtocontents{lof}{~\hfill \textit{Halaman}\par}
+\addtocontents{lot}{~\hfill \textit{Halaman}\par}
+
+% Membuat juga kata "halaman" di daftar lampiran
+\addtocontents{apc}{~\hfill \textit{Halaman}\par}
+
 \newcommand{\listappendicesname}{DAFTAR LAMPIRAN}
 \newlistof{appendices}{apc}{\listappendicesname}
 \newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{#1}}

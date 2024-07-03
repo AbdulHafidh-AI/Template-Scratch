@@ -85,6 +85,15 @@
 \renewcommand{\cftsecaftersnum}{.}
 \renewcommand{\cftsubsecaftersnum}{.}
 
+\addtocontents{toc}{~\hfill \textit{Halaman}\par} % Menambahkan kata "Halaman" di sebelah kanan daftar isi
+
+% Membuat juga kata "halaman" di daftar gambar dan daftar tabel
+\addtocontents{lof}{~\hfill \textit{Halaman}\par}
+\addtocontents{lot}{~\hfill \textit{Halaman}\par}
+
+% Membuat juga kata "halaman" di daftar lampiran
+\addtocontents{apc}{~\hfill \textit{Halaman}\par}
+
 % Agar setiap angka bab/subbab diakhiri titik
 \usepackage{titlesec}
 \titlelabel{\thetitle.\quad}
@@ -164,6 +173,12 @@
 \usepackage{amsmath}
 \usepackage{pdfpages}
 
+% \usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{colortbl}
+% Beamer presentation requires  instead of \usepackage[table,xcdraw]{xcolor}
+% \usepackage{longtable}
+
 \begin{document}
 \fancyhf{} 
 \fancyfoot[C]{\thepage}
@@ -184,7 +199,7 @@
 % Disini kata pengantar
 %-----------------------------------------------------------------
 \include{kata-pengantar}
-%\includepdf[pages=-]{ttd-seminar-hasil_signed.pdf}
+\includepdf[pages=-]{ttd-seminar-hasil_signed.pdf}
 
 \titleformat{\section}{\normalfont\bfseries\uppercase}{\thesection}{1.7em}{} % Untuk membuat section menjadi kapital tapi daftar isi tetap non kapital
 
