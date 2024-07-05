@@ -49,3 +49,5 @@ You can try to use online LaTeX editor such as:
 - [ShareLaTeX](https://www.sharelatex.com/) (online)
 - [TeXmaker](http://www.xm1math.net/texmaker/) (offline)
 
+## Warning ⚠️
+LaTeX ini hanya boleh digunakan bagi orang-orang yang bersungguh-sungguh untuk belajar, dan rajin membaca dokumentasi ❗
