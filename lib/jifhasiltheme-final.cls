@@ -347,7 +347,7 @@
 			\vfill
 			\vspace{2cm}
 			{\normalfont
-				\MakeUppercase{\normalfont\bfseries Program Studi Informatika Jurusan \@dept}\\
+				\MakeUppercase{\normalfont\bfseries Program Studi Informatika Departemen \@dept}\\
 				\MakeUppercase{\normalfont\bfseries\@faculty} \MakeUppercase{\normalfont\bfseries\@university ,  \@city}\\
 				%\MakeUppercase{\normalfont\bfseries\@city}\\
 				%\vspace{0.5cm}
@@ -362,7 +362,7 @@
 \def\approvalpage{%
 	\clearpage\addcontentsline{toc}{chapter}{Halaman Pengesahan}
 	\chapter*{\approvalname}%
-	\thispagestyle{empty}
+	%\thispagestyle{empty}
 	\begin{center}
 		\begin{doublespace}
 			\vspace{0.5cm}
@@ -406,8 +406,8 @@
 			% Tanpa mengetahui dekan
 			Mengetahui:\\
 				\begin{tabular}{lll}
-					Dekan Fakultas MIPA & &
-					Koordinator Program Studi Informatika \\ 
+					Dekan FMIPA & &
+					Koordinator Prodi S1 Informatika FMIPA \\ 
 					\vspace{-0.27cm} & \vspace{-0.27cm} & \vspace{-0.27cm}\\
 					Universitas Syiah Kuala, & & Universitas Syiah Kuala,\\
 					\vspace{0.3cm} & \vspace{0.3cm} & \vspace{0.3cm}\\

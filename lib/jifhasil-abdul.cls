@@ -361,7 +361,7 @@
 			\vfill
 			\vspace{2cm}
 			{\normalfont
-				\MakeUppercase{\normalfont\bfseries Program Studi Informatika Jurusan \@dept}\\
+				\MakeUppercase{\normalfont\bfseries Program Studi Informatika Departemen \@dept}\\
 				\MakeUppercase{\normalfont\bfseries\@faculty} \MakeUppercase{\normalfont\bfseries\@university ,  \@city}\\
 				%\MakeUppercase{\normalfont\bfseries\@city}\\
 				%\vspace{0.5cm}
